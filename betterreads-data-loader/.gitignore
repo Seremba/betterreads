@@ -33,4 +33,4 @@ build/
 .vscode/
 
 ### Secure Connect ###
-/src/main/resources/secure-connect-betterreads.zip
+/src/main/resources/secure-connect.zip
