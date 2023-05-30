@@ -1,4 +1,4 @@
-package com.seremba.connection;
+package com.seremba.betterreadsdataloader.connection;
 
 import java.io.File;
 
