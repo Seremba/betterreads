@@ -70,13 +70,30 @@ public class BetterreadsDataLoaderApplication {
 	}
 	
 	private void initWorks() {
+		Path path = Paths.get(worksDatadumpLocation);
 		
+		try (Stream<String> lines = Files.lines(path)) {
+			lines.limit(10).forEach(line -> {
+				String jsonString = line.substring(line.indexOf("{"));
+				try {
+					new JSONObject(jsonString);
+					
+				}
+				catch (JSONException e) {
+					e.printStackTrace();
+				}
+			});
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+			
+				
 	}
 	
 	@PostConstruct
 	public void start() {
-		
-		System.out.println(authorDatadumpLocation);
+		initAuthor();
 	}
 	
 	@Bean
