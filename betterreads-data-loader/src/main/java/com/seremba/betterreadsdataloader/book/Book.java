@@ -11,8 +11,6 @@ import org.springframework.data.cassandra.core.mapping.Column;
 import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
 import org.springframework.data.cassandra.core.mapping.Table;
 
-
-	
 @Table(value = "book_by_id")
 public class Book {
 	
@@ -30,7 +28,7 @@ public class Book {
 	
 	@Column("published_date")
 	@CassandraType(type = Name.DATE)
-	private LocalDate pubishedDate;
+	private LocalDate publishedDate;
 	
 	@Column("cover_ids")
 	@CassandraType(type = Name.LIST, typeArguments = Name.TEXT)
@@ -40,64 +38,80 @@ public class Book {
 	@CassandraType(type = Name.LIST, typeArguments = Name.TEXT)
 	private List<String> authorNames;
 	
-	@Column("author_ids")
+	@Column("author_id")
 	@CassandraType(type = Name.LIST, typeArguments = Name.TEXT)
 	private List<String> authorIds;
+
 	
 	public String getId() {
 		return id;
 	}
+
 	
 	public void setId(String id) {
 		this.id = id;
 	}
+
 	
 	public String getName() {
 		return name;
 	}
+
 	
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	
 	public String getDescription() {
 		return description;
 	}
+
 	
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
 	
-	public LocalDate getPubishedDate() {
-		return pubishedDate;
+	public LocalDate getPublishedDate() {
+		return publishedDate;
 	}
+
 	
-	public void setPubishedDate(LocalDate pubishedDate) {
-		this.pubishedDate = pubishedDate;
+	public void setPublishedDate(LocalDate publishedDate) {
+		this.publishedDate = publishedDate;
 	}
+
 	
 	public List<String> getCoverIds() {
 		return coverIds;
 	}
+
 	
 	public void setCoverIds(List<String> coverIds) {
 		this.coverIds = coverIds;
 	}
+
 	
 	public List<String> getAuthorNames() {
 		return authorNames;
 	}
+
 	
 	public void setAuthorNames(List<String> authorNames) {
 		this.authorNames = authorNames;
 	}
+
 	
 	public List<String> getAuthorIds() {
 		return authorIds;
 	}
+
 	
 	public void setAuthorIds(List<String> authorIds) {
 		this.authorIds = authorIds;
 	}
-	
+
+
 }
+
