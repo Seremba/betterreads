@@ -1,5 +1,5 @@
-package com.seremba.betterreadsdataloader.connection;
 
+package com.seremba.betterreadsdataloader.connection;
 import java.io.File;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;

@@ -87,7 +87,7 @@ public class BetterreadsDataLoaderApplication {
 				try {
 					JSONObject jsonObject = new JSONObject(jsonString);
 					Book book = new Book();
-					book.setId(jsonObject.getString("key").replace("/authors/", ""));
+					book.setId(jsonObject.getString("key").replace("/works/", ""));
 					book.setName(jsonObject.optString("title"));
 					JSONObject descriptionObj = jsonObject.optJSONObject("description");
 					if (descriptionObj != null) {
