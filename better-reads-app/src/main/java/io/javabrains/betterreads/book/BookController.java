@@ -25,9 +25,7 @@ public class BookController {
 			String coverImageUrl = "/images/image-not-found.jpg";
 			if(book.getCoverIds() != null & book.getCoverIds().size() > 0) {
 				 coverImageUrl = COVER_IMAGE_ROOT + book.getCoverIds().get(0) + "-L.jpg";
-			} else {
-				
-			}
+				}
 			model.addAttribute("coverImage", coverImageUrl);
 			model.addAttribute("book", book);
 			return "book";
