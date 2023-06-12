@@ -16,7 +16,7 @@ public class BookController {
 	
 	private final String COVER_IMAGE_ROOT = "https://covers.openlibrary.org/b/id/";
 	
-	@GetMapping("/book/{bookId}")
+	@GetMapping("/books/{bookId}")
 	public String getBook(@PathVariable String bookId, Model model) {
 		Optional<Book> optionalBook = bookRepository.findById(bookId);
 		
